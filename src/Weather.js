@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import formattedDate from "./FormattedDate";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 
@@ -41,15 +41,15 @@ export default function Weather(props) {
           </div>
         </form>
         <h1>{weatherData.city}</h1>
-        <ul>
+        <ul className="p-0">
           <li>
-            <formattedDate date={weatherData.date} />
+            <FormattedDate date={weatherData.date} />
           </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
-        <div classsName="row mt-3">
+        <div className="row mt-3">
           <div className="col-6">
-            <div className="clearfix">
+            <div className="d-flex">
               <img
                 src={weatherData.icon}
                 alt={weatherData.description}
