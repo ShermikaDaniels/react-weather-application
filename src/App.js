@@ -12,6 +12,7 @@ export default function App() {
           <a
             href="https://www.linkedin.com/in/shermika-daniels-70093b139"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Shermika Daniels
           </a>{" "}
@@ -19,6 +20,7 @@ export default function App() {
           <a
             href="https://github.com/ShermikaDaniels/react-weather-application"
             target="_blank"
+            rel="noopener noreferrer"
           >
             {" "}
             open-sourced{" "}
