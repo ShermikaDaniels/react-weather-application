@@ -22,7 +22,10 @@ export default function WeatherForecast(props) {
       <div className="row">
         <div className="col">
           <div className="WeatherForecast-day">Thu</div>
-          <WeatherIcon code="icon" size={36} />
+          <WeatherIcon
+            code="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+            size={36}
+          />{" "}
           <div classname="WeatherForecast-temperatures">
             <span className="WeatherForecast-temperature-max">19°</span>{" "}
             <span className="WeatherForecast-temperature-min">10°</span>
@@ -32,5 +35,3 @@ export default function WeatherForecast(props) {
     </div>
   );
 }
-
-//https://api.shecodes.io/weather/v1/current?lon={lon}&lat={lat}&key=bf54175800a55e59e6c4d6461deeef12
