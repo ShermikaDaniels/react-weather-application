@@ -4,11 +4,11 @@ import "./WeatherForecast.css";
 import axios from "axios";
 
 export default function WeatherForecast(props) {
-  let [loaded, setLoaded] = useState(true);
+  let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
-    setForecast(response.condition.icon_url); //(response.data.daily)
+    setForecast(response.data.condition.icon_url); //(response.data.daily)
     setLoaded(true);
   }
 
@@ -31,7 +31,7 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    let apiKey = "bf54175800a55e59e6c4d6461deeef12";
+    let apiKey = "fbef01f4et1b02o0d25c27210a43ef3f";
     let longitude = props.coordinates.longitude;
     let latitude = props.coordinates.latitude;
     let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
