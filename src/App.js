@@ -16,7 +16,7 @@ export default function App() {
           >
             Shermika Daniels
           </a>{" "}
-          and is
+          with React.js and is
           <a
             href="https://github.com/ShermikaDaniels/react-weather-application"
             target="_blank"
@@ -25,7 +25,11 @@ export default function App() {
             {" "}
             open-sourced{" "}
           </a>{" "}
-          on GitHub
+          on GitHub and hosted on{" "}
+          <a href="/" target="_blank" rel="noopener noreferrer">
+            {" "}
+            Netlify
+          </a>
         </footer>
       </div>
     </div>
