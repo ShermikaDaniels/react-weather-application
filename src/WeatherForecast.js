@@ -9,7 +9,7 @@ export default function WeatherForecast(props) {
   let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
-    setForecast(response.data.condition.icon_url);
+    setForecast(response.data.daily);
     setLoaded(true);
     //console.log(response.data.temperature.current);
   }
@@ -28,10 +28,10 @@ export default function WeatherForecast(props) {
             />{" "}
             <div classname="WeatherForecast-temperatures">
               <span className="WeatherForecast-temperature-max">
-                {forecast[0].temp.max}°
+                {forecast[0].temperature.maximum}°
               </span>{" "}
               <span className="WeatherForecast-temperature-min">
-                {forecast[0].temp.min}°
+                {forecast[0].temperature.minimum}°
               </span>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function WeatherForecast(props) {
     let apiKey = "cea86aeaf9414de0b74t0d5132af8ebo";
     let longitude = props.coordinates.longitude;
     let latitude = props.coordinates.latitude;
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
 
