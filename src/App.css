@@ -16,3 +16,7 @@ body {
   font-size: 11px;
   margin: 10px 0;
 }
+
+a {
+  color: purple;
+}
